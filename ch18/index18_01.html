@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        /* 애니메이션 가로 크기를 적용한다 */
+        transition-property: width, height, background-color;
+        transition-duration: 1.5s;
+      }
+      .box:hover {
+        width: 500px;
+        height: 500px;
+        background-color: rgb(176, 218, 255);
+      }
+      .spaceship {
+        font-size: 50px;
+        /* 애니메이션 가로 크기를 적용한다 */
+        transition-property: font-size;
+        transition-duration: 1.5s;
+      }
+      .spaceship:hover {
+        font-size: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="spaceship">🚀</div>
+  </body>
+</html>

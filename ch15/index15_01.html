@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인라인 vs 블록 vs 인라인-블록</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box {
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .inline {
+            display: inline;
+            /* inline 값은 width, height 크기를 무시한다 */
+            width: 100px;
+            height: 100px;
+            /* margin 값은 좌우만 적용이 된다 */
+            margin: 20px;
+            /* 좌우 적용 가능하나 상하는 제한적(레이아웃에 영향을 미칠 수 있다) */
+            padding: 0 50px;
+        }
+        .block {
+            display: block;
+            width: 100px;
+            margin: 20px;
+            padding: 20px;
+        }
+        .inline-block {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>1. Inline 요소</h3>
+    <div class="box inline">Box1</div>
+    <div class="box inline">Box2</div>
+    <div class="box inline">Box3</div>
+
+    <h3>2. Block 요소</h3>
+    <div class="box block">Box1</div>
+    <div class="box block">Box2</div>
+    <div class="box block">Box3</div>
+
+     <h3>3. Inline-Block 요소</h3>
+    <div class="box inline-block">Box1</div>
+    <div class="box inline-block">Box2</div>
+    <div class="box inline-block">Box3</div>
+
+    <br><br>
+    <h3>span 태그 사용</h3>
+    <span style="color: aqua; font-weight: bold;">안녕</span>&nbsp;<span>반가워</span>
+</body>
+</html>

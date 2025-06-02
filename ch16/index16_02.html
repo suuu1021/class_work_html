@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding: 40px;
+        font-family: "CookieRun", sans-serif;
+      }
+      .chat-message {
+        width: 300px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        text-decoration: underline;
+      }
+      .message-normal {
+        /* 공백 및 줄바꿈 처리 */
+        /* 기본 값 */
+        white-space: normal;
+      }
+      .message-nowrap {
+        /* 공백 및 줄바꿈 처리 */
+        /* 기본 값 */
+        white-space: nowrap;
+        /* overflow 속성이 들어가야 text-overflow 가 적용이 된다 */
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>채팅 메세지 스타일링</h2>
+    <div class="chat-message message-normal">
+      안녕? 오늘 기분이 어때? 아주 긴 메세지를 보내볼게요. 이 메세지는 줄 바꿈이
+      됩니다.
+    </div>
+    <div class="chat-message message-nowrap">
+      안녕? 오늘 기분이 어때? 아주 긴 메세지를 보내볼게요. 이 메세지는 줄 바꿈
+      없이 ... 으로 표시 됩니다.
+    </div>
+  </body>
+</html>
